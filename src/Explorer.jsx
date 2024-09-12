@@ -46,13 +46,13 @@ class Explorer extends React.Component {
             });
             console.log(error);
         }
-        this.displayWeather(location.data[0].lat, location.data[0].lon,this.state.searchQuery);
+        this.displayWeather(location.data[0].lat, location.data[0].lon);
     };
 
-    displayWeather = async (lat,lon,searchQuery) => {
+    displayWeather = async (lat,lon) => {
         try{
-            const weather = await axios.get(`${SERVER_URL}/weather`, { params: { latitude: lat, longitude: lon, searchQuery: searchQuery } });
-            this.setState({weather:weather.data});
+            const weather = await axios.get(`${SERVER_URL}/weather`, { params: { latitude: lat, longitude: lon} });
+            this.setState({weather:weather.data.data});
             console.log(weather);
         }catch (error){
             this.setState({
