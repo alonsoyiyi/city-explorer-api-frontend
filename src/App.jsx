@@ -3,6 +3,7 @@ import './App.css'
 import Header from './Header'
 import Footer from './Footer'
 import Explorer from './Explorer'
+// import ExplorerR from './ExplorerR'
 import React from 'react'
 
 class App extends React.Component {
