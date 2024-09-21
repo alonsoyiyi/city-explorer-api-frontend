@@ -1,18 +1,19 @@
 import React from "react";
 
-class Weather extends React.Component{
-    render(){
-        return(
-            <section>
-                <h2>Weather</h2>
-                {this.props.weather.map((day, index) => (
-                    <div key={index}>
-                        <p>day:{day.day}</p>
-                        <p>description:{day.description}</p>
-                    </div>
-                ))}
-            </section>
-        ); 
-    }
+function Weather(props) {
+
+    return (
+        <section>
+            <h2>Weather</h2>
+            {props.weather.map((x, index) => (
+                <div key={index}>
+                    <p>day:{x.day}</p>
+                    <p>description:{x.description}</p>
+                    <p>countryCode:{x.country_code}</p>
+                </div>
+            ))}
+        </section>
+    );
+
 }
 export default Weather;

@@ -1,11 +1,11 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 
-class Map extends React.Component{
-    render(){
+function Map(props){
+
         return(
-            <Image src={this.props.img_url} alt={this.props.city} title={this.props.city} rounded fluid/>
+            <Image src={props.img_url} alt={props.city} title={props.city} rounded fluid/>
         );
-    }
+
 }
 export default Map;
